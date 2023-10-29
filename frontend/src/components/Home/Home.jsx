@@ -3,7 +3,7 @@ import "./Home.css";
 
 const Home = () => {
   
-  return <div>TEAM LEADER PRATIK</div>;
+  return <div>TEAM LEADER PRATIK Home</div>;
 };
 
 export default Home;
