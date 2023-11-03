@@ -1,9 +1,14 @@
 import React from "react";
 import "./Home.css";
 
-const Home = () => {
-  
-  return <div>TEAM LEADER PRATIK Home</div>;
+
+const Header = () => {
+  return (
+    <header className="header">
+      Hello World!
+    </header>
+  );
 };
 
-export default Home;
+
+export default Header;
