@@ -1,0 +1,115 @@
+/* Footer.css */
+
+.footer {
+  background-color: #ffffff;
+  color: #333; /* Text color on light background */
+  padding: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.section {
+  margin-bottom: 20px;
+  margin-left: 50px; /* Adjusted margin to reduce space between sections */
+  flex: 0 0 calc(48% - 20px); /* Adjusted width to leave space between sections */
+
+}
+h2{
+  margin-left:50px;
+  space: 20px;
+}
+.tools,
+.help,
+.company,
+.social-media,
+.newsletter,
+.terms,
+.company-info {
+  flex: 0 0 100%;
+  
+  margin-bottom: 20px;
+  margin-left: 50px; /* Adjusted margin to reduce space between sections */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+label {
+  font-weight: bold;
+}
+
+.button {
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+  background-color: #ff9933;
+  color: #ffffff; /* Text color on button */
+}
+
+.button:hover {
+  background-color: #333;
+}
+
+.links ul,
+.tools ul,
+.help ul,
+.company ul {
+  list-style: none;
+  padding: 0;
+  margin-left : 50px;
+}
+
+.links a,
+.tools a,
+.help a,
+.company a {
+  color: #333;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 5px;
+  margin-left : 50px;
+}
+
+.office-info p,
+.newsletter p,
+.terms p,
+.company-info p {
+  margin: 0;
+}
+
+.social-media h2 {
+  margin-bottom: 10px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icons a {
+  color: #333;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+/* Responsive Styles */
+
+@media (min-width: 768px) {
+  .section {
+    flex: 0 0 calc(30% - 20px); /* Adjusted width for larger screens */
+  }
+}
