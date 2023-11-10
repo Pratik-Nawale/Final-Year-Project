@@ -1,17 +1,15 @@
 import React from "react";
 import "./Navbar.css";
 
-
-
 const Header = () => {
   return (
     <header className="header">
       <div className="logo">
-      <img src="./logo.png" alt="Logo" />
+        <img src="/images/logo1.png" alt="Logo" />
       </div>
+
       <nav className="nav">
         <ul className="nav-list">
-
           <li className="nav-item"><a href="/">Home</a></li>
 
           <li className="nav-item">
@@ -40,16 +38,15 @@ const Header = () => {
           </li>
 
           <li className="nav-item"><a href="/contact">Contact</a></li>
-
         </ul>
-
       </nav>
 
       <div className="search-bar">
         <input type="text" placeholder="Search..." />
-        <button>Search</button>
+        <button>
+          <img src="/images/search.png" alt="" />
+        </button>
       </div>
-
     </header>
   );
 };
