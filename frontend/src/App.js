@@ -1,19 +1,6 @@
-import "./App.css";
-import { Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar/Navbar";
-import Home from "./components/Home/Home";
-import Footer from "./components/Footer/Footer";
+import React from "react";
+import Home from "./pages/Home";
 
-function App() {
-  return (
-    <>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-      </Routes>
-      <Footer />
-    </>
-  );
+export default function App() {
+  return <Home />;
 }
-
-export default App;
