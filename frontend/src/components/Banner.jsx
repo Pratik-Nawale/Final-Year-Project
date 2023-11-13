@@ -1,29 +1,22 @@
 import React from "react";
 import styled from "styled-components";
-import bg from "../assets/img_3.jpg";
+import bg from "../assets/Perifery.jpg";
 import Button from "./reusable/Button";
 import H1 from "./reusable/H1";
 import WithBarTitle from "./reusable/WithBarTitle";
 import { FaPlay } from "react-icons/fa";
 import Header from "./Header";
-// import myVd from "../assets/vd_1.mp4";
 
 export default function Banner() {
   return (
     <Main>
-      {/* <Video poster={bg} autoplay playsinline muted loop>
-        <source
-          src="https://css-tricks-post-videos.s3.us-east-1.amazonaws.com/Island%20-%204141.mp4"
-          type="video/mp4"
-        />
-      </Video> */}
       <Header />
 
       <Container>
         <RightBox>
-          <WithBarTitle title="WITH SHRAVAN MEENA" />
-          <H1>Build Perfect body shape for good and healthy life.</H1>
-          <Button animation="fadeInLeft">Became a member</Button>
+          <WithBarTitle title="AI-FITNESS and Sports in AI with EATHERBOTS" />
+          <H1>Unlock Your Potential with AI-Powered Sports Analytics</H1>
+          <Button animation="fadeInLeft">Join the Experience</Button>
         </RightBox>
         <LeftBox>
           <Circle>
@@ -63,9 +56,9 @@ const LeftBox = styled.div`
   flex-direction: column;
   align-items: flex-end;
 `;
+
 const RightBox = styled.div`
   width: 50%;
-
   padding: 0px 100px;
 `;
 
