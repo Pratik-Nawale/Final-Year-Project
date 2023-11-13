@@ -200,7 +200,7 @@ const Footer = () => {
         </div> */}
       </div>
       <div id="lower-footer">
-        <div id="copy-right">&copy; Lydian Inc. 2023. All Rights Reserved</div>
+        <div id="copy-right">&copy; Fitness-AI Inc. 2023. All Rights Reserved</div>
         <div id="other-sections">
           {otherLinks.map((ele, key) => (
             <>
