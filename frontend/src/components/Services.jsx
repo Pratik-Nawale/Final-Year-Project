@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import bg from "../assets/img_1.jpg";
+import bg from "../assets/img_3.jpg";
 import { servicesData } from "../data/localData";
 import Button from "./reusable/Button";
 import H1 from "./reusable/H1";
@@ -11,12 +11,12 @@ export default function Services() {
     <Container>
       <InnerContainer>
         <Box>
-          <WithBarTitle title="Our Services for you" />
+          <WithBarTitle title="AI-FITNESS and Sports in AI Services" />
           <Header>
             <H1 style={{ width: "50%", fontSize: 40 }}>
-              PUSH YOUR LIMITS FORWARD WE OFFER TO YOU
+              Elevate Your Performance with Our Cutting-Edge Services
             </H1>
-            <Button>More Services</Button>
+            <Button>Explore More</Button>
           </Header>
           <Cards>
             {servicesData?.map((_, index) => {
@@ -46,7 +46,6 @@ export function Card({ item }) {
 const Container = styled.div`
   width: 100%;
   height: 100vh;
-
   background-image: url(${bg});
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -94,6 +93,7 @@ const MyCard = styled.div`
   justify-content: center;
   padding: 20px;
   color: #212025;
+  border-radius: 15px;
 `;
 
 const Icon = styled.span`
