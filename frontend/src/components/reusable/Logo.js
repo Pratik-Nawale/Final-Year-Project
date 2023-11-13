@@ -5,10 +5,8 @@ import styled from "styled-components";
 export default function Logo() {
   return (
     <Box>
-      <Img>
-        <GiGymBag />
-      </Img>
-      <Title>FITNESS</Title>
+    
+      <Title>FITNESS-AI</Title>
     </Box>
   );
 }
