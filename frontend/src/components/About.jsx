@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import bg from "../assets/img_9.webp";
+import bg from "../assets/markets.png";
 import Button from "./reusable/Button";
 import H1 from "./reusable/H1";
 import H2 from "./reusable/H2";
@@ -58,9 +58,11 @@ const Left = styled.div`
 
 const Right = styled.div`
   width: 45%;
+  
 `;
 
 const Image = styled.img`
   width: 70%;
   height: 80%;
+  border-radius: 15px;
 `;

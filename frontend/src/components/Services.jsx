@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import bg from "../assets/img_1.jpg";
+import bg from "../assets/img_3.jpg";
 import { servicesData } from "../data/localData";
 import Button from "./reusable/Button";
 import H1 from "./reusable/H1";
@@ -93,6 +93,7 @@ const MyCard = styled.div`
   justify-content: center;
   padding: 20px;
   color: #212025;
+  border-radius: 15px;
 `;
 
 const Icon = styled.span`

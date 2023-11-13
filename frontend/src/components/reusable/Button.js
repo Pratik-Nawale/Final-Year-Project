@@ -19,4 +19,5 @@ const BTN = styled.button`
   cursor: pointer;
   animation: ${(props) => props.animation};
   animation-duration: 2s;
+  border-radius: 10px;
 `;
