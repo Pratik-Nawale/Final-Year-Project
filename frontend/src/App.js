@@ -1,6 +1,15 @@
 import React from "react";
-import Home from "./pages/Home";
+import { Route, Routes } from "react-router-dom";
+import LandingPage from "./components/LandingPage/LandingPage";
+import Navbar from "./components/LandingPage/Navbar/Navbar";
 
 export default function App() {
-  return <Home />;
+  return (
+    <>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+      </Routes>
+    </>
+  );
 }
