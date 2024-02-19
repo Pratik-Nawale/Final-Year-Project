@@ -1,0 +1,145 @@
+#header-container {
+  display: flex;
+  height: auto;
+  width: auto;
+}
+
+#header-heading-container {
+  height: 500px;
+  width: 50%;
+  /* background-color: red; */
+}
+
+#header-image-container {
+  height: 500px;
+  width: 50%;
+  background-color: #03113d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#header-image-container > img {
+  filter: brightness(0) invert(1) grayscale(100%) brightness(10);
+  max-width: 100%;
+  width: 100%;
+  height: auto !important;
+}
+
+#header-heading-container {
+  background-color: #03113d;
+  padding: 4rem;
+}
+
+#header-heading-container > h1 {
+  font-size: 3rem;
+  line-height: 1.5;
+  font-weight: 900;
+  color: #fff;
+}
+
+#header-sign-up-button {
+  margin-top: 2rem;
+  background-color: #0ebcd6;
+  border: 0 solid #e5e7eb;
+  box-sizing: border-box;
+  color: #e5e7eb;
+  display: flex;
+  font-family: ui-sans-serif, system-ui, -apple-system, system-ui, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 700;
+  justify-content: center;
+  line-height: 1.75rem;
+  padding: 0.75rem 1.65rem;
+  position: relative;
+  text-align: center;
+  text-decoration: none #e5e7eb solid;
+  text-decoration-thickness: auto;
+  width: 100%;
+  max-width: 460px;
+  position: relative;
+  cursor: pointer;
+  transform: rotate(-2deg);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+#header-sign-up-button:focus {
+  outline: 0;
+}
+
+#header-sign-up-button:after {
+  content: "";
+  position: absolute;
+  border: 2px solid #e5e7eb;
+  bottom: 4px;
+  left: 4px;
+  width: calc(100% - 1px);
+  height: calc(100% - 1px);
+}
+
+#header-sign-up-button:hover:after {
+  bottom: 2px;
+  left: 2px;
+}
+
+@media (min-width: 768px) {
+  #header-sign-up-button {
+    padding: 0.75rem 3rem;
+    font-size: 1.25rem;
+  }
+}
+
+@media all and (max-width: 1194px) {
+  #header-heading-container > h1 {
+    font-size: 2.5rem;
+    padding: 2rem;
+  }
+  #header-heading-container {
+    padding-top: 0;
+  }
+}
+
+@media all and (max-width: 992px) {
+  #header-container {
+    flex-wrap: wrap;
+  }
+  #header-heading-container {
+    width: 100%;
+    height: auto;
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+  #header-image-container {
+    width: 100%;
+    height: auto;
+  }
+
+  #header-image-container > img {
+    width: 50%;
+  }
+}
+
+@media all and (max-width: 800px) {
+  #header-heading-container > h1 {
+    font-size: 2rem;
+  }
+  #header-image-container > img {
+    width: 60%;
+  }
+}
+@media all and (max-width: 600px) {
+  #header-heading-container > h1 {
+    font-size: 1.7rem;
+    padding: 0;
+  }
+}
+@media all and (max-width: 500px) {
+  #header-heading-container > h1 {
+    font-size: 1.5rem;
+    padding: 0;
+  }
+}
