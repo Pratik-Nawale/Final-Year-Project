@@ -116,20 +116,30 @@
   #header-image-container {
     width: 100%;
     height: auto;
-
   }
 
-  #header-image-container > img{
+  #header-image-container > img {
     width: 50%;
   }
 }
 
 @media all and (max-width: 800px) {
-    #header-heading-container > h1 {
-        font-size: 2rem;
-      }
-      #header-image-container > img{
-        width: 60%;
-      }
+  #header-heading-container > h1 {
+    font-size: 2rem;
+  }
+  #header-image-container > img {
+    width: 60%;
+  }
 }
-
+@media all and (max-width: 600px) {
+  #header-heading-container > h1 {
+    font-size: 1.7rem;
+    padding: 0;
+  }
+}
+@media all and (max-width: 500px) {
+  #header-heading-container > h1 {
+    font-size: 1.5rem;
+    padding: 0;
+  }
+}
