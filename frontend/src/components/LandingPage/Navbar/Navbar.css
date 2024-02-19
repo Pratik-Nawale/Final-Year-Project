@@ -4,7 +4,6 @@ nav#nav-container > a {
   font-weight: 600;
 }
 
-
 #nav-container {
   display: flex;
   align-items: center;
@@ -18,6 +17,8 @@ nav#nav-container > a {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  z-index: 1;
 }
 #nav-elements-container li {
   list-style: none;
@@ -58,12 +59,12 @@ nav#nav-container > a {
   transform-origin: bottom left;
 }
 
-#sidebar {
+#nav-sidebar {
   cursor: pointer;
   display: none;
 }
 
-#sidebar i {
+#nav-sidebar i {
   color: white;
   align-items: center;
 }
@@ -74,6 +75,7 @@ nav#nav-container > a {
   }
 
   #nav-elements-container {
+
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -95,11 +97,11 @@ nav#nav-container > a {
     font-size: 1.3em;
     margin-bottom: 30px;
   }
-  #sidebar {
+  #nav-sidebar {
     cursor: pointer;
     display: block;
   }
-  #sidebar i {
+  #nav-sidebar i {
     font-size: 25px;
   }
 }

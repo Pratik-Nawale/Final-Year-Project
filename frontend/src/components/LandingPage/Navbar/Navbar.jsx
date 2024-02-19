@@ -54,7 +54,7 @@ const Navbar = () => {
         </ul>
       </div>
 
-      <div id="sidebar" onClick={handleClick}>
+      <div id="nav-sidebar" onClick={handleClick}>
         <i id="bar" className={clicked ? "fas fa-times" : "fas fa-bars"}></i>
       </div>
     </nav>
