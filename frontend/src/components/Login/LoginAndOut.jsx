@@ -19,19 +19,19 @@ const LoginAndOut = () => {
   // const loginHandler = async (e) => { /* ... */ };
 
   return (
-    <div className="box-form-Login">
+    <div id="Login-box-form">
 
-      <div className="login-body">
-        <section className="wrapper">
+      <div id="login-body">
+        <section className="Login-wrapper">
           <div
-            className="form signup"
+            className="Login-form" id="signup"
             onClick={() => {
-              document.querySelector(".wrapper").classList.remove("active");
+              document.querySelector(".Login-wrapper").classList.remove("active");
             }}
           >
             <header
               onClick={() => {
-                document.querySelector(".wrapper").classList.remove("active");
+                document.querySelector(".Login-wrapper").classList.remove("active");
               }}
             >
               Signup
@@ -80,14 +80,14 @@ const LoginAndOut = () => {
           </div>
 
           <div
-            className="form login"
+            className="Login-form login" 
             onClick={() => {
-              document.querySelector(".wrapper").classList.add("active");
+              document.querySelector(".Login-wrapper").classList.add("active");
             }}
           >
             <header
               onClick={() => {
-                document.querySelector(".wrapper").classList.add("active");
+                document.querySelector(".Login-wrapper").classList.add("active");
               }}
             >
               Login
