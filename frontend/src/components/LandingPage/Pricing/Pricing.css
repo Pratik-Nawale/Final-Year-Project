@@ -93,6 +93,10 @@
 .pricing-about-us {
   text-align: justify;
   margin-top: 40px;
+  display: flex;
+  flex-direction:column ;
+  /* justify-content : center; */
+  align-items : center;
 }
 
 .pricing-about-us-title {
@@ -102,6 +106,7 @@
 }
 
 .pricing-about-us-text {
+  width: 70%;
   color: #666;
 }
 
