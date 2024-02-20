@@ -22,7 +22,7 @@ const navElements = [
   },
   {
     title: "Contact",
-    link: "/",
+    link: "/contactus",
   },
 ];
 
