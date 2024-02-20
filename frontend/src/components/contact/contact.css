@@ -59,7 +59,7 @@
     width: 100%;
     text-align: center;
 }
-@media all and (max-width: 450px) and (max-height: 900px) {
+@media all and (max-width: 650px) and (max-height: 900px) {
     .main-contact .contact-form {
         width: 80%;
    }
