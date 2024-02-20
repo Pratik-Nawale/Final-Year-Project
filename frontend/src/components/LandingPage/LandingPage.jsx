@@ -4,6 +4,7 @@ import Header from "./Header/Header";
 import Pricing from "./Pricing/Pricing";
 import Features from "./Features/Features"
 import Footer from "./Footer/Footer"
+import AboutUs from "./AboutUs/AboutUs";
 
 const LandingPage = () => {
   return (
@@ -17,6 +18,8 @@ const LandingPage = () => {
 
       {/* Yuvraj  */}
       <Pricing/>
+
+      <AboutUs/>
 
       {/* Yashfin  */}
       <Footer/>

@@ -2,7 +2,9 @@
 
 .pricing-section {
   padding: 80px 0;
-  background-color: #fff;
+  /* background-color: #fff; */
+  background-color: #3486bd;
+
 }
 
 .pricing-container {
@@ -14,7 +16,7 @@
 .pricing-section-title {
   text-align: center;
   margin-bottom: 40px;
-  color: #333;
+  color: #fff;
 }
 
 .pricing-cards {
@@ -64,7 +66,6 @@
 }
 
 .pricing-card-features {
-  align-item: center; 
   list-style-type: none;
   justify-content: center;
   padding: 0;
@@ -90,25 +91,7 @@
   color: red;
 }
 
-.pricing-about-us {
-  text-align: justify;
-  margin-top: 40px;
-  display: flex;
-  flex-direction:column ;
-  /* justify-content : center; */
-  align-items : center;
-}
 
-.pricing-about-us-title {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #333;
-}
-
-.pricing-about-us-text {
-  width: 70%;
-  color: #666;
-}
 
 .pricing-card-button {
   display: block;
