@@ -1,16 +1,14 @@
 /* Import Google font - Poppins */
-.box-form-Login{
+#Login-box-form{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
-  }
-  
-  .box-form-Login {
     display: flex;
   }
   
-  .login-body {
+ 
+  #login-body {
     flex: 1;
     min-height: 100vh;
     display: flex;
@@ -19,7 +17,7 @@
     background: rgba(181, 200, 250, 1) url('https://miro.medium.com/v2/resize:fit:1400/0*r37IVgW745eadA5T') center/cover; /* Set the background image */
   }
   
-  .wrapper {
+  .Login-wrapper {
     position: relative;
     max-width: 600px;
     width: 100%;
@@ -30,14 +28,14 @@
     overflow: hidden;
   }
   
-  .wrapper form {
+  .Login-wrapper form {
     display: flex;
     flex-direction: column;
     gap: 20px;
     margin-top: 40px;
   }
   
-  .form.login {
+  .Login-form.login {
     position: absolute;
     left: 50%;
     bottom: -86%;
@@ -50,45 +48,45 @@
     transition: all 0.6s ease;
   }
   
-  .form.login header {
+  .Login-form.login header {
     color: #333;
     opacity: 0.6;
   }
   
-  .form.login input {
+  .Login-form.login input {
     border: 1px solid #aaa;
   }
   
-  .form.login input:focus {
+  .Login-form.login input:focus {
     box-shadow: 0 1px 0 #ddd;
   }
   
-  .form.login input[type="submit"] {
+  .Login-form.login input[type="submit"] {
       color: #fff;
       border: none;
       background: #3fb8e3;
   }
-  .form.signup input[type="submit"] {
+  .Login-form #signup input[type="submit"] {
     color: #fff;
     border: none;
     background: #77e48f;
 }
   
-  .wrapper.active .form.login {
+  .Login-wrapper.active .Login-form.login {
     bottom: -15%;
     border-radius: 35%;
     box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1);
   }
   
-  .wrapper.active .form.login header {
+  .Login-wrapper.active .Login-form.login header {
     opacity: 1;
   }
   
-  .wrapper.active .signup header {
+  .Login-wrapper.active #signup header {
     opacity: 0.6;
   }
   
-  .form header {
+  .Login-form header {
     font-size: 30px;
     text-align: center;
     color: #fff;
@@ -96,11 +94,11 @@
     cursor: pointer;
   }
   
-  .wrapper form {
+  .Login-wrapper form {
     height: 300px;
   }
   
-  .wrapper form input {
+  .Login-wrapper form input {
     height: 60px;
     outline: none;
     border: none;
@@ -112,27 +110,27 @@
     background: #fff;
   }
   
-  .wrapper form .checkbox {
+  .Login-wrapper form .checkbox {
     display: flex;
     align-items: center;
     gap: 10px;
   }
   
-  .wrapper form .checkbox label {
+  .Login-wrapper form .checkbox label {
     cursor: pointer;
     color: #fff;
   }
   
-  .wrapper form a {
+  .Login-wrapper form a {
     color: #333;
     text-decoration: none;
   }
   
-  .wrapper form a:hover {
+  .Login-wrapper form a:hover {
     text-decoration: underline;
   }
   
-  .wrapper form input[type="submit"] {
+  .Login-wrapper form input[type="submit"] {
     margin-top: 15px;
     padding: none;
     font-size: 18px;
@@ -142,7 +140,7 @@
   
   /* For Desktop View */
   @media screen and (min-width: 1024px) {
-    .wrapper {
+    .Login-wrapper {
       position: relative;
       max-width: 600px;
       width: 100%;
@@ -153,7 +151,7 @@
       overflow: hidden;
     }
   
-    .wrapper form {
+    .Login-wrapper form {
       align-items: center;
       height: 350px;
       display: flex;
@@ -165,7 +163,7 @@
       padding-left: 40px;
     }
   
-    .wrapper input {
+    .Login-wrapper input {
       width: 350px;
       height: 60px;
       outline: none;
@@ -181,7 +179,7 @@
   
   /* For Tablet View */
   @media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-    .wrapper {
+    .Login-wrapper {
       position: relative;
       max-width: 600px;
       width: 100%;
@@ -192,7 +190,7 @@
       overflow: hidden;
     }
   
-    .wrapper form {
+    .Login-wrapper form {
       height: 300px;
       align-items: center;
       padding-left: 130px;
@@ -203,7 +201,7 @@
       width: 400px;
     }
   
-    .wrapper input {
+    .Login-wrapper input {
       width: 350px;
       height: 60px;
       outline: none;
