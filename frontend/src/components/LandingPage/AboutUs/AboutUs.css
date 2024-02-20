@@ -1,0 +1,74 @@
+#pricing-about-us {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  padding: 40px;
+  /* justify-content : center; */
+  align-items: center;
+  color: #03113d;
+  /* background-color: rgb(232, 237, 240); */
+}
+
+#pricing-about-us h2 {
+  font-size: 3rem;
+  line-height: 1.5;
+  font-weight: 900;
+  padding-bottom: 1rem;
+}
+
+#pricing-about-us p {
+  width: 80%;
+  font-size: 1.3rem;
+}
+
+@media all and (max-width: 1024px) {
+  #pricing-about-us h2 {
+    font-size: 2.5rem;
+  }
+
+  #pricing-about-us p {
+    font-size: 1.1rem;
+  }
+}
+
+@media all and (max-width: 845px) {
+  #pricing-about-us h2 {
+    font-size: 2.2rem;
+  }
+
+  #pricing-about-us p {
+    font-size: 1rem;
+  }
+}
+
+@media all and (max-width: 768px) {
+  #pricing-about-us h2 {
+    font-size: 1.8rem;
+    margin: 0;
+  }
+
+  #pricing-about-us p {
+    font-size: 0.8rem;
+    padding: 0;
+  }
+}
+
+@media all and (max-width: 525px) {
+  #pricing-about-us h2 {
+    font-size: 1.6rem;
+  }
+
+  #pricing-about-us p {
+    font-size: 0.6rem;
+  }
+}
+
+/* @media all and (max-width: 473px) {
+  #pricing-about-us h2 {
+    font-size: 1.3rem;
+  }
+
+  #pricing-about-us p {
+    font-size: 0.6rem;
+  }
+} */
