@@ -62,8 +62,8 @@ const Pricing = () => {
                     </li>
                   ))}
                 </ul>
-                <button className="pricing-card-button">Sign Up</button>
               </div>
+                <button className="pricing-card-button">Sign Up</button>
             </div>
           ))}
         </div>
