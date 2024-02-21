@@ -11,10 +11,10 @@ const LandingPage = () => {
     <>
     {/* Pratik */}
       <Navbar />
-      <Header/>
+      <Header />
 
       {/* Sadiya  */}
-      <Features/>
+      <Features id="feature"/>
 
       {/* Yuvraj  */}
       <Pricing/>
