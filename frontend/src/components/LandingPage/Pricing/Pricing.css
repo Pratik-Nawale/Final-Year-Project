@@ -2,24 +2,24 @@
 
 .pricing-section {
   padding-top: 20px;
-  /* background-color: #fff; */
   background-color: #3486bd;
 }
 
 .pricing-container {
-  
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
 .pricing-section-title {
-  font-size: 3rem;
+  font-size: 3rem; /* Default font size for larger screens */
   line-height: 1.5;
   font-weight: 900;
   text-align: center;
   color: #fff;
 }
+
+
 
 .pricing-cards {
   display: flex;
@@ -34,16 +34,15 @@
   border-radius: 20px;
   padding: 0;
   width: 30%;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-bottom: 20px;
-  padding-bottom: 73px ;
+  padding-bottom: 73px;
   position: relative;
 }
 
 .pricing-card-header {
-  /* background-color: #f2f2f2; */
   border-bottom: 1px solid #ddd;
   padding: 10px 20px;
   display: flex;
@@ -51,16 +50,12 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  border-radius-top:20px;
+  border-radius-top: 20px;
 }
 
 .pricing-card-title {
   font-size: 24px;
   color: #007bff;
-  text-align: center;
-  align-items:center;
-  display:inline-block;
-  
 }
 
 .pricing-card-price {
@@ -68,26 +63,23 @@
   font-weight: bold;
   color: #333;
   margin-top: 20px;
-  padding:20px 0;     
+  padding: 20px 0;
   text-align: center;
 }
 
 .pricing-card-content {
-  text-align: left ;
+  text-align: left;
   align-items: center;
   display: contents;
-  /* margin :20px; */
-  /* padding :  */
 }
 
 .pricing-card-features {
   list-style-type: none;
-  display:flex;
-  flex-direction:column;
-  align-items:flex-start;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   padding: 0;
-  width :70%;
-  
+  width: 70%;
 }
 
 .pricing-card-features li {
@@ -110,8 +102,6 @@
   color: red;
 }
 
-
-
 .pricing-card-button {
   display: block;
   width: calc(100% - 40px);
@@ -125,7 +115,6 @@
   cursor: pointer;
   bottom: -3px;
   position: absolute;
-  /* width:80%; */
 }
 
 .pricing-card-button:hover {
@@ -147,12 +136,24 @@
   .pricing-card-content {
     margin: 20px;
   }
-  
+
   .pricing-card-features {
     width: 80%;
   }
-  
+
   .pricing-card-button {
     width: calc(100% - 40px);
+    bottom: 0;
+  }
+}
+@media (max-width: 768px) {
+  .pricing-section-title {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .pricing-section-title {
+    font-size: 2.5rem; 
   }
 }

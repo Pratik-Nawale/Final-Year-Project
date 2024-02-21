@@ -62,13 +62,12 @@ const Pricing = () => {
                     </li>
                   ))}
                 </ul>
-              </div>
                 <button className="pricing-card-button">Sign Up</button>
+              </div>
             </div>
           ))}
         </div>
       </div>
-
     </section>
   );
 };
