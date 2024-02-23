@@ -56,7 +56,6 @@ const LandingPage = () => {
       {/* Pratik */}
       <Navbar />
       <Header />
-      <Header />
 
       {/* Sadiya  */}
       <Features />
