@@ -68,7 +68,6 @@ const Pricing = () => {
           ))}
         </div>
       </div>
-
     </section>
   );
 };

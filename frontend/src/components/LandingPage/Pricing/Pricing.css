@@ -1,10 +1,8 @@
 /* Pricing.css */
 
 .pricing-section {
-  padding: 80px 0;
-  /* background-color: #fff; */
+  padding-top: 20px;
   background-color: #3486bd;
-
 }
 
 .pricing-container {
@@ -14,10 +12,14 @@
 }
 
 .pricing-section-title {
+  font-size: 3rem; /* Default font size for larger screens */
+  line-height: 1.5;
+  font-weight: 900;
   text-align: center;
-  margin-bottom: 40px;
   color: #fff;
 }
+
+
 
 .pricing-cards {
   display: flex;
@@ -29,27 +31,31 @@
 .pricing-card {
   background-color: #fff;
   border: 1px solid #ddd;
-  border-radius: 8px;
+  border-radius: 20px;
   padding: 0;
   width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-bottom: 20px;
+  padding-bottom: 73px;
+  position: relative;
 }
 
 .pricing-card-header {
-  background-color: #f2f2f2;
   border-bottom: 1px solid #ddd;
   padding: 10px 20px;
-  margin: 0;
   display: flex;
-  justify-content: space-between;
+  width: 100%;
+  justify-content: center;
   align-items: center;
+  text-align: center;
+  border-radius-top: 20px;
 }
 
 .pricing-card-title {
   font-size: 24px;
   color: #007bff;
-  text-align: center;
-  margin: 0; 
 }
 
 .pricing-card-price {
@@ -57,23 +63,28 @@
   font-weight: bold;
   color: #333;
   margin-top: 20px;
+  padding: 20px 0;
   text-align: center;
 }
 
 .pricing-card-content {
-  text-align: center ;
-  margin :20px;
+  text-align: left;
+  align-items: center;
+  display: contents;
 }
 
 .pricing-card-features {
   list-style-type: none;
-  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   padding: 0;
+  width: 70%;
 }
 
 .pricing-card-features li {
   margin-bottom: 10px;
-  display: flex;
+  display: inline-block;
   align-items: center;
 }
 
@@ -91,19 +102,19 @@
   color: red;
 }
 
-
-
 .pricing-card-button {
   display: block;
   width: calc(100% - 40px);
-  margin: 20px auto 0;
+  margin: 20px auto 20px;
   padding: 10px 20px;
   border: none;
-  border-radius: 5px;
+  border-radius: 7px;
   background-color: #007bff;
   color: #fff;
   text-align: center;
   cursor: pointer;
+  bottom: -3px;
+  position: absolute;
 }
 
 .pricing-card-button:hover {
@@ -120,5 +131,29 @@
 @media (max-width: 768px) {
   .pricing-card {
     width: 100%;
+  }
+
+  .pricing-card-content {
+    margin: 20px;
+  }
+
+  .pricing-card-features {
+    width: 80%;
+  }
+
+  .pricing-card-button {
+    width: calc(100% - 40px);
+    bottom: 0;
+  }
+}
+@media (max-width: 768px) {
+  .pricing-section-title {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .pricing-section-title {
+    font-size: 2.5rem; 
   }
 }
