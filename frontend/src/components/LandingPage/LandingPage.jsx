@@ -7,6 +7,7 @@ import Features from "./Features/Features";
 import Footer from "./Footer/Footer";
 import AboutUs from "./AboutUs/AboutUs";
 
+
 const LandingPage = () => {
   const navigate = useNavigate();
 
