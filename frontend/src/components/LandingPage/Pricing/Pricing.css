@@ -19,8 +19,6 @@
   color: #fff;
 }
 
-
-
 .pricing-cards {
   display: flex;
   flex-wrap: wrap;
@@ -50,7 +48,8 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  border-radius-top: 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 
 .pricing-card-title {
@@ -154,6 +153,6 @@
 
 @media (min-width: 768px) and (max-width: 992px) {
   .pricing-section-title {
-    font-size: 2.5rem; 
+    font-size: 2.5rem;
   }
 }

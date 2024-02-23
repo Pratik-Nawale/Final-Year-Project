@@ -1,8 +1,8 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import "./Navbar.css";
 import { Link } from "react-scroll";
+import { NavLink } from "react-router-dom";
 
 const navElements = [
   {
@@ -24,10 +24,6 @@ const navElements = [
     title: "About",
     link: "pricing-about-us",
     offset: 50,
-  },
-  {
-    title: "Contact",
-    link: "/contactus",
   },
 ];
 
@@ -67,6 +63,9 @@ const Navbar = () => {
               </Link>
             </li>
           ))}
+          <li>
+            <NavLink to="/contactus">Contact</NavLink>
+          </li>
         </ul>
       </div>
 

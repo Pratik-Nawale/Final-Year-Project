@@ -42,7 +42,7 @@ const Footer = () => {
         
         <div id="footer-nav">
           {elements.map((ele, key) => (
-            <a href="#">{ele}</a>
+            <a href="/">{ele}</a>
           ))}
         </div>
       </div>

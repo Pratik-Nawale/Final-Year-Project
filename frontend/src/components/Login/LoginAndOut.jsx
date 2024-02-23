@@ -1,7 +1,6 @@
 // Import necessary dependencies and styles
 import React from "react";
 import "./login.css";
-import { Link, NavLink } from "react-router-dom";
 
 // Functional component for Login and Signup
 const LoginAndOut = () => {
