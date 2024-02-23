@@ -30,13 +30,14 @@ const Navbar = () => {
   const [clicked, setclicked] = useState(false);
 
   const handleClick = () => {
-    console.log("clicked");
     if (clicked) {
       setclicked(false);
     } else if (!clicked) {
       setclicked(true);
     }
   };
+
+  
 
 
   return (

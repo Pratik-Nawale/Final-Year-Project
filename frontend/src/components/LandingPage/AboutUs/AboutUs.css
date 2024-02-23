@@ -48,12 +48,12 @@
   }
 
   #pricing-about-us p {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     padding: 0;
   }
 }
 
-@media all and (max-width: 525px) {
+/* @media all and (max-width: 525px) {
   #pricing-about-us h2 {
     font-size: 1.6rem;
   }
@@ -61,14 +61,6 @@
   #pricing-about-us p {
     font-size: 0.6rem;
   }
-}
-
-/* @media all and (max-width: 473px) {
-  #pricing-about-us h2 {
-    font-size: 1.3rem;
-  }
-
-  #pricing-about-us p {
-    font-size: 0.6rem;
-  }
 } */
+
+

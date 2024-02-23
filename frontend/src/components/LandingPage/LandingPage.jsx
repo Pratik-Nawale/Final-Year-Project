@@ -57,7 +57,7 @@ const LandingPage = () => {
       <Navbar />
       <Header />
 
-      {/* Sadiya */}
+      {/* Sadiya  */}
       <Features />
 
       {/* Yuvraj */}
