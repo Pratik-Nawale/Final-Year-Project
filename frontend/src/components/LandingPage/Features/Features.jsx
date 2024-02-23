@@ -78,7 +78,7 @@ const Features = () => {
   }, []);
 
   return (
-    <div>
+    <div id="features">
       {windowSize.innerWidth <= 768 ? (
         <Slider className="elements" {...settings}>
           <FeatureElement2 item={Feature_contents[0]} />

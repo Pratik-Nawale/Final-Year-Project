@@ -1,24 +1,29 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import "./Navbar.css";
+import { Link } from "react-scroll";
 
 const navElements = [
   {
     title: "Home",
-    link: "/",
+    link: "header-container",
+    offset: 20,
   },
   {
     title: "Features",
-    link: "/",
+    link: "features",
+    offset: 0,
   },
   {
     title: "Pricing",
-    link: "/",
+    link: "pricing-section",
+    offset: 0,
   },
   {
     title: "About",
-    link: "/",
+    link: "pricing-about-us",
+    offset: 50,
   },
   {
     title: "Contact",
@@ -37,19 +42,29 @@ const Navbar = () => {
     }
   };
 
-  
-
-
   return (
     <nav id="nav-container">
       <Link href="">SPORTZ</Link>
       <div>
-        <ul id="nav-elements-container" className={clicked? "nav-elements-container active": "nav-elements-container"}>  
+        <ul
+          id="nav-elements-container"
+          className={
+            clicked ? "nav-elements-container active" : "nav-elements-container"
+          }
+        >
           {navElements.map((item, key) => (
             <li>
-              <NavLink className="active" to={item.link} key={key}>
+              <Link
+                to={item.link}
+                key={key}
+                activeClass="active"
+                spy={true}
+                smooth={true}
+                offset={item.offset}
+                duration={600}
+              >
                 {item.title}
-              </NavLink>
+              </Link>
             </li>
           ))}
         </ul>
