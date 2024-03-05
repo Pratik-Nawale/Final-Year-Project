@@ -1,6 +1,7 @@
 import express from "express";
 import connectDB from "./config/db.js";
 import dotenv from "dotenv";
+import router from "./routes/userRoutes.js";
 
 dotenv.config();
 
@@ -9,10 +10,13 @@ connectDB();
 const app = express();
 app.use(express.json());
 
+// * Routes
+app.use('/api/user', router)
+
 const port = process.env.PORT || 8080;
 
 app.get("/", (req, res) => {
-  res.send(200).send({
+  res.sendStatus(200).send({
     message: "server is running",
   });
 });

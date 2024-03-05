@@ -5,8 +5,8 @@
   padding: 40px;
   /* justify-content : center; */
   align-items: center;
-  color: #03113d;
-  /* background-color: rgb(232, 237, 240); */
+  color: #fff;
+  background-color: #03113d;
 }
 
 #pricing-about-us h2 {
@@ -14,11 +14,13 @@
   line-height: 1.5;
   font-weight: 900;
   padding-bottom: 1rem;
+  text-shadow: 11px 7px 6px #3f434f;
 }
 
 #pricing-about-us p {
   width: 80%;
   font-size: 1.3rem;
+  text-shadow: 7px 5px 6px #707586;
 }
 
 @media all and (max-width: 1024px) {
