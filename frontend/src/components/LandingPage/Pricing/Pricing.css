@@ -2,7 +2,7 @@
 
 .pricing-section {
   padding-top: 20px;
-  background-color: #3486bd;
+  background-color: #03113d;
 }
 
 .pricing-container {
@@ -17,6 +17,7 @@
   font-weight: 900;
   text-align: center;
   color: #fff;
+  text-shadow: 11px 7px 6px #3f434f;
 }
 
 .pricing-cards {
