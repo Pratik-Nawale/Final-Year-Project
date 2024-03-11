@@ -1,11 +1,14 @@
 // Dashboard.jsx
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { ColorModeContext, useMode } from "./theme";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Outlet } from "react-router-dom";
 import Topbar from "./scenes/global/Topbar";
 import Sidebar from "./scenes/global/Sidebar";
 import DashboardContent from "./scenes/board";
+import Team from "./scenes/team";
+import Contacts from "./scenes/contacts"; // Corrected import
 import "./dashboard.css";
+
 const Dashboard = () => {
   const [theme, colorMode] = useMode();
   return (
@@ -17,7 +20,10 @@ const Dashboard = () => {
           <main className="content">
             <Topbar />
             <Routes>
-              <Route path="/dashboard" element={<DashboardContent />} />
+              <Route path="/" element={<DashboardContent />} />
+              <Route path="team" element={<Team />} />
+              <Route path="/contacts" element={<Contacts />} />
+              <Route path="/*" element={<Outlet />} />
             </Routes>
           </main>
         </div>
