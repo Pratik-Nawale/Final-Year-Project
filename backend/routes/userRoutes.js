@@ -1,5 +1,5 @@
 import express from "express";
-import {signupController, loginController} from "../controllers/userController.js";
+import {signupController, loginController, authController} from "../controllers/userController.js";
 import { authMiddleWare } from "../middlewares/authMiddleware.js";
 
 const router = express.Router();
@@ -9,6 +9,9 @@ router.post("/signup", signupController);
 
 router.post("/login", loginController);
 
-router.get("/auth", authMiddleWare)
+//?  Authorization || Post
+router.post("/getUserData", authMiddleWare, authController);
+
+// router.post("/auth", authMiddleWare)
 
 export default router;
