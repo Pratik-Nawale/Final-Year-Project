@@ -8,6 +8,7 @@ import axios from "axios";
 
 // Functional component for Login and Signup
 const LoginAndOut = () => {
+
   // State variables (commented out for now)
   // const [loginEmail, setLoginEmail] = useState("");
   // const [loginPassword, setLoginPassword] = useState("");
@@ -51,7 +52,7 @@ const LoginAndOut = () => {
     e.preventDefault();
     // console.log(signUpData);
     try {
-      const res = await axios.post("/api/user/signup", signUpData);
+      const res = await axios.post(`/api/user/signup`, signUpData);
       if (res.data.success) {
         message.success("Register Successfully!");
         // navigate("/login");
