@@ -1,6 +1,6 @@
 {
   "name": "frontend",
-  "proxy": "${REACT_APP_PROXY_URL}",
+  "proxy": "https://final-year-project-si9w.onrender.com",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

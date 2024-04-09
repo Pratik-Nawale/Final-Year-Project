@@ -7,11 +7,10 @@ import { setUser } from "../../redux/features/userSlice";
 export default function ProtectedRoutes({ children }) {
   const dispatch = useDispatch();
   const { user } = useSelector((state) => state.user);
-
   const getUser = async () => {
     try {
       const res = await axios.post(
-        "api/user/getUserData",
+        `/api/user/getUserData`,
         {
           token: localStorage.getItem("token"),
         },
