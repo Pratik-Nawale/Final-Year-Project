@@ -66,6 +66,11 @@ const Navbar = () => {
           <li>
             <NavLink to="/contactus">Contact</NavLink>
           </li>
+          <li>
+            <NavLink to="/SignUp-Login">
+              Login
+            </NavLink>
+          </li>
         </ul>
       </div>
 

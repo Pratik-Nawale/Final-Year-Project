@@ -10,7 +10,7 @@ export default function ProtectedRoutes({ children }) {
   const getUser = async () => {
     try {
       const res = await axios.post(
-        `/api/user/getUserData`,
+        `https://final-year-project-si9w.onrender.com/api/user/getUserData`,
         {
           token: localStorage.getItem("token"),
         },
