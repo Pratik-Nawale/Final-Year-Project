@@ -52,7 +52,7 @@ const LoginAndOut = () => {
     e.preventDefault();
     // console.log(signUpData);
     try {
-      const res = await axios.post(`/api/user/signup`, signUpData);
+      const res = await axios.post(`https://final-year-project-si9w.onrender.com/api/user/signup`, signUpData);
       if (res.data.success) {
         message.success("Register Successfully!");
         // navigate("/login");
@@ -69,7 +69,7 @@ const LoginAndOut = () => {
     e.preventDefault();
     // console.log(loginData);
     try {
-      const res = await axios.post("/api/user/login", loginData);
+      const res = await axios.post("https://final-year-project-si9w.onrender.com/api/user/login", loginData);
       if (res.data.success) {
         localStorage.setItem("token", res.data.token);
         message.success("Login Successfully");
