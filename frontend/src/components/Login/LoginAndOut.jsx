@@ -70,7 +70,7 @@ const LoginAndOut = () => {
     // console.log(loginData);
     try {
       const res = await axios.post("https://final-year-project-si9w.onrender.com/api/user/login", loginData);
-      if (res.data.success) {
+       if (res.data.success) {
         localStorage.setItem("token", res.data.token);
         message.success("Login Successfully");
         navigate("/dashboard");
