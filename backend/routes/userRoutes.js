@@ -2,16 +2,16 @@ import express from "express";
 import {signupController, loginController, authController} from "../controllers/userController.js";
 import { authMiddleWare } from "../middlewares/authMiddleware.js";
 
-const router = express.Router();
+const userRouter = express.Router();
 
 
-router.post("/signup", signupController);
+userRouter.post("/signup", signupController);
 
-router.post("/login", loginController);
+userRouter.post("/login", loginController);
 
 //?  Authorization || Post
-router.post("/getUserData", authMiddleWare, authController);
+userRouter.post("/getUserData", authMiddleWare, authController);
 
 // router.post("/auth", authMiddleWare)
 
-export default router;
+export default userRouter;
