@@ -8,7 +8,6 @@ import axios from "axios";
 
 // Functional component for Login and Signup
 const LoginAndOut = () => {
-
   // State variables (commented out for now)
   // const [loginEmail, setLoginEmail] = useState("");
   // const [loginPassword, setLoginPassword] = useState("");
@@ -23,6 +22,7 @@ const LoginAndOut = () => {
     fullName: "",
     username: "",
     email: "",
+    role: "",
     password: "",
   });
 
@@ -50,9 +50,9 @@ const LoginAndOut = () => {
   // const navigate = useNavigate();
   const signUpHandler = async (e) => {
     e.preventDefault();
-    // console.log(signUpData);
+    console.log(signUpData);
     try {
-      const res = await axios.post(`https://final-year-project-si9w.onrender.com/api/user/signup`, signUpData);
+      const res = await axios.post(`/api/user/signup`, signUpData);
       if (res.data.success) {
         message.success("Register Successfully!");
         // navigate("/login");
@@ -69,8 +69,8 @@ const LoginAndOut = () => {
     e.preventDefault();
     // console.log(loginData);
     try {
-      const res = await axios.post("https://final-year-project-si9w.onrender.com/api/user/login", loginData);
-       if (res.data.success) {
+      const res = await axios.post("/api/user/login", loginData);
+      if (res.data.success) {
         localStorage.setItem("token", res.data.token);
         message.success("Login Successfully");
         navigate("/dashboard");
@@ -141,6 +141,18 @@ const LoginAndOut = () => {
                 //   setSignUpEmail(e.target.value);
                 // }}
               />
+              <select  type="text"
+                placeholder="-- Select Role --"
+                required
+                name="role"
+                value={signUpData.role}
+                onChange={handleSignUpChange}>
+                <option value="">-- select role --</option>
+                <option value="student">Student</option>
+                <option value="coach">Coach</option>
+              </select>
+
+
               <input
                 type="password"
                 placeholder="Password"
