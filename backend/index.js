@@ -1,7 +1,8 @@
 import express from "express";
 import connectDB from "./config/db.js";
 import dotenv from "dotenv";
-import router from "./routes/userRoutes.js";
+import userRouter from "./routes/userRoutes.js";
+import adminRouter from "./routes/adminRoutes.js";
 
 dotenv.config();
 
@@ -11,7 +12,8 @@ const app = express();
 app.use(express.json());
 
 // * Routes
-app.use('/api/user', router)
+app.use('/api/user', userRouter)
+app.use('/api/admin', adminRouter)
 
 const port = process.env.PORT || 8080;
 

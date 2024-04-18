@@ -8,7 +8,7 @@ import jwt from "jsonwebtoken";
 
 const signupController = async (req, res) => {
   try {
-    if (!req.body.email || !req.body.password || !req.body.number || !req.body.fullName) {
+    if (!req.body.email || !req.body.password || !req.body.number || !req.body.fullName || !req.body.role) {
       return res
         .status(200)
         .send({ message: "all fields must be filled", success: false });

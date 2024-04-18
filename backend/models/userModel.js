@@ -19,6 +19,14 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: [true, "Mobile number is required"],
   },
+  role: {
+    type: String,
+    required: [true, "Please select role"]
+  },
+  isAdmin: {
+    type: Boolean,
+    default: false,
+  },
 });
 
 // ? Static Signup Method
