@@ -21,7 +21,7 @@ const Dashboard = () => {
             <Topbar />
             <Routes>
               <Route path="/" element={<DashboardContent />} />
-              <Route path="team" element={<Team />} />
+              <Route path="/team" element={<Team />} />
               <Route path="/contacts" element={<Contacts />} />
               <Route path="/*" element={<Outlet />} />
             </Routes>
