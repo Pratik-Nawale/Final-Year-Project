@@ -1,0 +1,32 @@
+/* board.css */
+
+
+.title {
+    color: #b55555;
+  }
+    .sub-title {
+      color: #333;
+    }
+    
+    .desc {
+      color: #666;
+    }
+    
+    .red {
+      color: red;
+    }
+    
+    .green {
+      color: green;
+    }
+    
+    .yellow {
+      color: rgb(195, 195, 17);
+    }
+    
+    .bg-gray {
+      background-color: #f4f4f4;
+    }
+    
+    /* Customize other styles as needed */
+    

@@ -5,8 +5,12 @@ import { Route, Routes, Outlet } from "react-router-dom";
 import Topbar from "./scenes/global/Topbar";
 import Sidebar from "./scenes/global/Sidebar";
 import DashboardContent from "./scenes/board";
+import Form from "./scenes/form";
 import Team from "./scenes/team";
-import Contacts from "./scenes/contacts"; // Corrected import
+import Orders from "./scenes/contacts"; // Corrected import
+import Calendar from "./scenes/calendar/calendar";
+import Invoices from "./scenes/orders";
+
 import "./dashboard.css";
 
 const Dashboard = () => {
@@ -21,8 +25,11 @@ const Dashboard = () => {
             <Topbar />
             <Routes>
               <Route path="/" element={<DashboardContent />} />
-              <Route path="/team" element={<Team />} />
-              <Route path="/contacts" element={<Contacts />} />
+              <Route path="team" element={<Team />} />
+              <Route path="/contacts" element={<Orders />} />
+              <Route path="/calendar" element={<Calendar />} />
+              <Route path="/form" element={<Form />} />
+              <Route path="/invoices" element={<Invoices />} />
               <Route path="/*" element={<Outlet />} />
             </Routes>
           </main>

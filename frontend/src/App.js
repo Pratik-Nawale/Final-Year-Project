@@ -21,7 +21,7 @@ export default function App() {
          <Route path="/room/:roomId" element={<RoomPage/>}/>
 
         <Route
-          path="/dashboard"
+          path="/dashboard/*"
           element={
             <ProtectedRoutes>
               <Dashboard />

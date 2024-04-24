@@ -7,7 +7,9 @@ import NotificationsOutlinedIcon from "@mui/icons-material/NotificationsOutlined
 import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
 import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
-
+import {Nav} from "react-bootstrap";
+import { Link } from "react-router-dom";
+import "./topbar.css"
 const Topbar = () => {
   const theme = useTheme();
 
@@ -23,12 +25,22 @@ const Topbar = () => {
         borderRadius="3px"
       >
         <InputBase sx={{ ml: 2, flex: 1 }} placeholder="Search" />
+        
         <IconButton type="button" sx={{ p: 1 }}>
           <SearchIcon />
         </IconButton>
       </Box>
       {/* Icons  */}
       <Box display={"flex"}>
+      <Nav.Item>
+              <Link
+                aria-label="Go to Home Page"
+                className="navbar-link"
+                to="/"
+              >
+                <span className="nav-link-label-top">Home</span>
+              </Link>
+            </Nav.Item>
         <IconButton onClick={colorMode.toggleColorMode}>
           {theme.palette.mode === "dark" ? (
             <LightModeOutlinedIcon />
