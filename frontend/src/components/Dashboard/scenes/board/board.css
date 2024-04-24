@@ -1,0 +1,37 @@
+/* board.css */
+
+.title {
+  color: #333;
+}
+
+.sub-title {
+  color: #333;
+}
+
+.desc {
+  color: #666;
+}
+
+.red {
+  color: red;
+}
+
+.green {
+  color: green;
+}
+
+.yellow {
+  color: rgb(195, 195, 17);
+}
+
+.bg-gray {
+  background-color: #f4f4f4;
+}
+
+/* Add overflow-x property only to the board component */
+.board-content {
+  overflow-x: auto;
+  background-color: #f4f4f4;
+}
+
+/* Customize other styles as needed */
