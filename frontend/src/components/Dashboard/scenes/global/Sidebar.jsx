@@ -8,6 +8,7 @@ import {
   MenuOutlined,
 } from "@mui/icons-material";
 import LogoutOutlinedIcon from "@mui/icons-material/LogoutOutlined";
+import NewspaperIcon from '@mui/icons-material/Newspaper';
 import { Box, IconButton, Typography, useTheme } from "@mui/material";
 import React, { useState } from "react";
 import { ProSidebar, Menu, MenuItem } from "react-pro-sidebar";
@@ -107,9 +108,9 @@ const Sidebar = () => {
 
           <Box paddingLeft={isCollapsed ? undefined : "10%"}>
             <Item
-              title="Dashboard"
+              title="News Feed"
               to="/dashboard"
-              icon={<HomeOutlined />}
+              icon={<NewspaperIcon />}
               selected={selected}
               setSelected={setSelected}
             />

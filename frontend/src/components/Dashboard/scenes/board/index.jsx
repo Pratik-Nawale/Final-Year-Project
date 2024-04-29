@@ -1,144 +1,51 @@
 // import { Box } from "@mui/material";
 import React from "react";
 // import Header from "../../comp/Header";
+import NewsContent from "./NewsContent/NewsContent";
+import axios from "axios";
+import { useEffect, useState } from "react";
+import "./board.css";
 
+const News = () => {
+  const [newsArray, setNewsArray] = useState([]);
+  const [newsResults, setNewsResults] = useState();
+  const [loadMore, setLoadMore] = useState(20);
 
-import "./board.css"
+  // console.log(process.env);
 
-const columns = [
-  {
-    title: "SNo",
-    dataIndex: "key",
-  },
-  {
-    title: "Name",
-    dataIndex: "name",
-  },
-  {
-    title: "Product",
-    dataIndex: "product",
-  },
-  {
-    title: "Price",
-    dataIndex: "Price",
-  },
-  {
-    title: "Status",
-    dataIndex: "staus",
-  },
-];
-const data1 = [
-  {
-    key: 1,
-    name: "Jon Snow",
-    product : `Rivet Bigelow Modern`,
-    Price: `$253`,
-    staus: `Delivered`,
-  },
-  {
-    key: 2,
-    name: "Cersei Lannister",
-    product: `Baltsar Chair`,
-    Price: `$89`,
-    staus: `Pending`,
-  },
-  {
-    key: 3,
-    name: "Jaime Lannister",
-    product: `Helmar Chair`,
-    Price: `$112`,
-    staus: `Delivered`,
-  },
-  {
-    key: 4,
-    name: "Jon Snow",
-    product: `Realme 8`,
-    Price: `$599`,
-    staus: `Pending`,
-  },
-  {
-    key: 5,
-    name: "Anya Stark",
-    product: `One Plus Nord`,
-    Price: `$799`,
-    staus: `Delivered`,
-  },
-  {
-    key: 6,
-    name: "Jon Snow",
-    product: `Beat EP Headphones`,
-    Price: `$199`,
-    staus: `Delivered`,
-  },
-  {
-    key: 7,
-    name: "Daenerys Targaryen",
-    product: `Realme 8`,
-    Price: `$599`,
-    staus: `Pending`,
-  },
-  {
-    key: 8,
-    name: "Ever Melisandre",
-    product: `Beat EP Headphones`,
-    Price: `$199`,
-    staus: `Pending`,
-  },
-  {
-    key: 9,
-    name: "Ferrara Clifford",
-    product: `One Plus Nord`,
-    Price:`$799`,
-    staus: `Delivered`,
-  },
-  {
-    key: 10,
-    name: "Rossini Frances",
-    product: `Baltsar Chair`,
-    Price: `$32`,
-    staus: `Pending`,
-  },
-  {
-    key: 11,
-    name: "Harvey Roxie",
-    product: `Rivet Bigelow Modern`,
-    Price: `$253`,
-    staus: `Delivered`,
-  },
-  {
-    key: 12,
-    name: "Steve Goodman",
-    product: `Baltsar Chair`,
-    Price: `$89`,
-    staus: `Pending`,
-  },
-  {
-    key: 13,
-    name: "Jon Snow",
-    product: `Realme 8`,
-    Price: `$599`,
-    staus: `Delivered`,
-  },
-  {
-    key: 14,
-    name: "Ever Melisandre",
-    product: `Baltsar Chair`,
-    Price: `$89`,
-    staus: `Pending`,
-  },
-];
+  const newsApi = async () => {
+    try {
+      const proxyUrl = "https://cors-anywhere.herokuapp.com/";
 
-const board = () => {
-  
+      const news = await axios.get(
+        `https://newsapi.org/v2/top-headlines?country=in&apiKey=${process.env.REACT_APP_API_KEY}&pageSize=${loadMore}&category=sports`
+      );
+      // console.log(news);
+      setNewsArray(news.data.articles);
+      setNewsResults(news.data.totalResults);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    newsApi();
+    // eslint-disable-next-line
+  }, [newsResults, loadMore]);
+
   return (
     <div className=" p-4">
-      <h3 className="mb-4 title">Dashboard</h3>
       <div className="d-flex justify-content-between align-items-center gap-3">
-        
+      {/* <h2 className="mb-4 title">News Feed</h2> */}
+        <NewsContent
+          newsArray={newsArray}
+          newsResults={newsResults}
+          loadMore={loadMore}
+          setLoadMore={setLoadMore}
+        />
       </div>
-
     </div>
   );
 };
 
-export default board;
+export default News;
