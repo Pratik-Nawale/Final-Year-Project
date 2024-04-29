@@ -18,4 +18,25 @@ const getAllUsersController = async (req, res) => {
     }
   };
 
-  export {getAllUsersController};
+  const deleteUserAccountControlller = async(req, res) => {
+
+    try {
+      // console.log(req.body._id);
+      await userModel.findByIdAndDelete(req.body._id);
+  
+      res.status(200).send({
+        success: true,
+        message: "Deleted user account",
+        // data: doctor,
+      });
+    } catch (error) {
+      console.log(error);
+      res.status(500).send({
+        success: false,
+        message: "error while deleting user account",
+        error,
+      });
+    }
+  };
+
+  export {getAllUsersController, deleteUserAccountControlller};

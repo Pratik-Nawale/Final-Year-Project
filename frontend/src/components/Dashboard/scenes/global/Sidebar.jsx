@@ -7,6 +7,7 @@ import {
   ReceiptOutlined,
   MenuOutlined,
 } from "@mui/icons-material";
+import LogoutOutlinedIcon from "@mui/icons-material/LogoutOutlined";
 import { Box, IconButton, Typography, useTheme } from "@mui/material";
 import React, { useState } from "react";
 import { ProSidebar, Menu, MenuItem } from "react-pro-sidebar";
@@ -14,11 +15,21 @@ import "react-pro-sidebar/dist/css/styles.css";
 import { Link } from "react-router-dom";
 import { tokens } from "../../theme";
 import "../../dashboard.css";
+import { message } from "antd";
+import { useSelector } from "react-redux";
+
 const Sidebar = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   const [isCollapsed, setIsCollapsed] = useState(false);
   const [selected, setSelected] = useState("Dashboard");
+  const { user } = useSelector((state) => state.user);
+
+  const HandleLogout = () => {
+    localStorage.clear();
+    message.success("Logout Successfull");
+    // navigate("/SignUp-Login");
+  };
 
   return (
     <Box
@@ -85,45 +96,52 @@ const Sidebar = () => {
                   fontWeight="bold"
                   sx={{ m: "10px 0 0 0" }}
                 >
-                  Sonu
+                  {user?.fullName}
                 </Typography>
                 <Typography variant="h5" color={colors.greenAccent[500]}>
-                  Admin
+                  {user?.role}
                 </Typography>
               </Box>
             </Box>
           )}
 
           <Box paddingLeft={isCollapsed ? undefined : "10%"}>
-            {/* <Item
+            <Item
               title="Dashboard"
               to="/dashboard"
               icon={<HomeOutlined />}
               selected={selected}
               setSelected={setSelected}
-            /> */}
+            />
 
+            {user?.isAdmin ? (
+              <>
             <Typography
               variant="h6"
               color={colors.grey[300]}
               sx={{ m: "15px 0 5px 20px" }}
             >
-              Data
+              Admin Controls
             </Typography>
-            <Item
-              title="Manage User"
-              to="/dashboard/team"
-              icon={<PeopleOutlined />}
-              selected={selected}
-              setSelected={setSelected}
-            />
-            <Item
-              title="Contacts Information"
-              to="/dashboard/contacts"
-              icon={<ContactsOutlined />}
-              selected={selected}
-              setSelected={setSelected}
-            />
+                <Item
+                  title="Manage User"
+                  to="/dashboard/manageUser"
+                  icon={<PeopleOutlined />}
+                  selected={selected}
+                  setSelected={setSelected}
+                />
+                <Item
+                  title="User Information"
+                  to="/dashboard/userInformation"
+                  icon={<ContactsOutlined />}
+                  selected={selected}
+                  setSelected={setSelected}
+                />
+              </>
+            ) : (
+              <></>
+            )}
+
             {/* <Item
               title="Sub"
               to="/dashboard/invoices"
@@ -153,6 +171,18 @@ const Sidebar = () => {
               selected={selected}
               setSelected={setSelected}
             />
+
+            <MenuItem
+              active={selected === "Logout"}
+              style={{
+                color: colors.grey[100],
+              }}
+              onClick={HandleLogout}
+              icon={<LogoutOutlinedIcon />}
+            >
+              <Typography>Logout</Typography>
+              <Link to="/SignUp-Login" />
+            </MenuItem>
           </Box>
         </Menu>
       </ProSidebar>

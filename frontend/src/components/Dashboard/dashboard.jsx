@@ -7,14 +7,17 @@ import Sidebar from "./scenes/global/Sidebar";
 import DashboardContent from "./scenes/board";
 import Form from "./scenes/form";
 import Team from "./scenes/team";
-import Orders from "./scenes/contacts"; // Corrected import
+import UserInformation from "./scenes/contacts"; // Corrected import
 import Calendar from "./scenes/calendar/calendar";
 import Invoices from "./scenes/orders";
+import { useSelector } from "react-redux";
 
 import "./dashboard.css";
 
 const Dashboard = () => {
   const [theme, colorMode] = useMode();
+  const { user } = useSelector((state) => state.user);
+
   return (
     <ColorModeContext.Provider value={colorMode}>
       <ThemeProvider theme={theme}>
@@ -25,8 +28,8 @@ const Dashboard = () => {
             <Topbar />
             <Routes>
               <Route path="/" element={<DashboardContent />} />
-              <Route path="team" element={<Team />} />
-              <Route path="/contacts" element={<Orders />} />
+              <Route path="manageUser" element={<Team />} />
+              <Route path="/userInformation" element={<UserInformation />} />
               <Route path="/calendar" element={<Calendar />} />
               <Route path="/form" element={<Form />} />
               <Route path="/invoices" element={<Invoices />} />
@@ -37,6 +40,6 @@ const Dashboard = () => {
       </ThemeProvider>
     </ColorModeContext.Provider>
   );
-}
+};
 
 export default Dashboard;

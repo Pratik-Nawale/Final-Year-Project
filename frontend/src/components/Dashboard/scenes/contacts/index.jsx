@@ -4,30 +4,54 @@ import { tokens } from "../../theme";
 import { mockDataContacts } from "../../Data/mockData";
 import Header from "../../comp/Header";
 import { useTheme } from "@mui/material";
+import * as React from "react";
+import axios from "axios";
+import { useState } from "react";
+import { useEffect } from "react";
 
+const UserInformation = () => {
+  const [users, setUsers] = useState([]);
 
-const Contacts = () => {
+  const getUsers = async () => {
+    try {
+      const res = await axios.get("/api/admin/getAllUsers", {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
+      });
+      if (res.data.success) {
+        setUsers(res.data.data);
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    getUsers();
+  }, []);
+
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
 
   const columns = [
     { field: "id", headerName: "ID", flex: 0.5 },
-    { field: "registrarId", headerName: "Registrar ID" },
+    // { field: "registrarId", headerName: "Registrar ID" },
     {
-      field: "name",
+      field: "fullName",
       headerName: "Name",
       flex: 1,
       cellClassName: "name-column--cell",
     },
     {
-      field: "age",
-      headerName: "Age",
+      field: "role",
+      headerName: "Role",
       type: "number",
       headerAlign: "left",
       align: "left",
     },
     {
-      field: "phone",
+      field: "number",
       headerName: "Phone Number",
       flex: 1,
     },
@@ -36,21 +60,21 @@ const Contacts = () => {
       headerName: "Email",
       flex: 1,
     },
-    {
-      field: "address",
-      headerName: "Address",
-      flex: 1,
-    },
-    {
-      field: "city",
-      headerName: "City",
-      flex: 1,
-    },
-    {
-      field: "zipCode",
-      headerName: "Zip Code",
-      flex: 1,
-    },
+    // {
+    //   field: "address",
+    //   headerName: "Address",
+    //   flex: 1,
+    // },
+    // {
+    //   field: "city",
+    //   headerName: "City",
+    //   flex: 1,
+    // },
+    // {
+    //   field: "zipCode",
+    //   headerName: "Zip Code",
+    //   flex: 1,
+    // },
   ];
 
   return (
@@ -92,7 +116,8 @@ const Contacts = () => {
         }}
       >
         <DataGrid
-          rows={mockDataContacts}
+          getRowId={(row) => row._id}
+          rows={users}
           columns={columns}
           components={{ Toolbar: GridToolbar }}
         />
@@ -101,4 +126,4 @@ const Contacts = () => {
   );
 };
 
-export default Contacts;
+export default UserInformation;
