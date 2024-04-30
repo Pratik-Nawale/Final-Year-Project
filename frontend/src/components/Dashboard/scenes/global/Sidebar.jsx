@@ -3,12 +3,15 @@ import {
   ContactsOutlined,
   HomeOutlined,
   PeopleOutlined,
-  PersonOutlined,
   ReceiptOutlined,
   MenuOutlined,
 } from "@mui/icons-material";
+import ContactPageIcon from '@mui/icons-material/ContactPage';
+import PlaceIcon from '@mui/icons-material/Place';
+import VideoCallIcon from '@mui/icons-material/VideoCall';
+import OnlinePredictionIcon from '@mui/icons-material/OnlinePrediction';
 import LogoutOutlinedIcon from "@mui/icons-material/LogoutOutlined";
-import NewspaperIcon from '@mui/icons-material/Newspaper';
+import NewspaperIcon from "@mui/icons-material/Newspaper";
 import { Box, IconButton, Typography, useTheme } from "@mui/material";
 import React, { useState } from "react";
 import { ProSidebar, Menu, MenuItem } from "react-pro-sidebar";
@@ -81,7 +84,7 @@ const Sidebar = () => {
 
           {!isCollapsed && (
             <Box mb="25px">
-              <Box display="flex" justifyContent="center" alignItems="center">
+              {/* <Box display="flex" justifyContent="center" alignItems="center">
                 <img
                   alt="profile-user"
                   width="100px"
@@ -89,7 +92,7 @@ const Sidebar = () => {
                   src={`../../images/dashboard/user.png`}
                   style={{ cursor: "pointer", borderRadius: "50%" }}
                 />
-              </Box>
+              </Box> */}
               <Box textAlign="center">
                 <Typography
                   variant="h2"
@@ -107,6 +110,14 @@ const Sidebar = () => {
           )}
 
           <Box paddingLeft={isCollapsed ? undefined : "10%"}>
+            <Typography
+              variant="h6"
+              color={colors.grey[300]}
+              sx={{ m: "15px 0 5px 20px" }}
+            >
+              Pages
+            </Typography>
+
             <Item
               title="News Feed"
               to="/dashboard"
@@ -114,16 +125,60 @@ const Sidebar = () => {
               selected={selected}
               setSelected={setSelected}
             />
+            <Item
+              title="Score Prediction"
+              to="/dashboard/score-prediction"
+              icon={<OnlinePredictionIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
+            <Item
+              title="Video Conferencing"
+              to={`/dashboard/room/${user?._id}`}
+              icon={<VideoCallIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
+            <Item
+              title="Nearest Academy"
+              to="/dashboard/nearest-academy"
+              icon={<PlaceIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
+
+            {/* <Item
+              title="Sub"
+              to="/dashboard/invoices"
+              icon={<ReceiptOutlined />}
+              selected={selected}
+              setSelected={setSelected}
+            /> */}
+
+            <Item
+              title="Contact Us"
+              to="/dashboard/form"
+              icon={<ContactPageIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
+            <Item
+              title="Calendar"
+              to="/dashboard/calendar"
+              icon={<CalendarTodayOutlined />}
+              selected={selected}
+              setSelected={setSelected}
+            />
 
             {user?.isAdmin ? (
               <>
-            <Typography
-              variant="h6"
-              color={colors.grey[300]}
-              sx={{ m: "15px 0 5px 20px" }}
-            >
-              Admin Controls
-            </Typography>
+                <Typography
+                  variant="h6"
+                  color={colors.grey[300]}
+                  sx={{ m: "15px 0 5px 20px" }}
+                >
+                  Admin Controls
+                </Typography>
                 <Item
                   title="Manage User"
                   to="/dashboard/manageUser"
@@ -143,35 +198,13 @@ const Sidebar = () => {
               <></>
             )}
 
-            {/* <Item
-              title="Sub"
-              to="/dashboard/invoices"
-              icon={<ReceiptOutlined />}
-              selected={selected}
-              setSelected={setSelected}
-            /> */}
-
             <Typography
               variant="h6"
               color={colors.grey[300]}
               sx={{ m: "15px 0 5px 20px" }}
             >
-              Pages
+              Other
             </Typography>
-            <Item
-              title="Add Product"
-              to="/dashboard/form"
-              icon={<PersonOutlined />}
-              selected={selected}
-              setSelected={setSelected}
-            />
-            <Item
-              title="Calendar"
-              to="/dashboard/calendar"
-              icon={<CalendarTodayOutlined />}
-              selected={selected}
-              setSelected={setSelected}
-            />
 
             <MenuItem
               active={selected === "Logout"}
