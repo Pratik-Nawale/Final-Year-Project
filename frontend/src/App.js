@@ -18,7 +18,6 @@ export default function App() {
         <Route path="/SignUp-Login" element={<LoginAndOut />} />
         <Route path="/contactus" element={<Contacts />} />
 
-         <Route path="/room/:roomId" element={<RoomPage/>}/>
 
         <Route
           path="/dashboard/*"

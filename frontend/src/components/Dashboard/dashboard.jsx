@@ -10,6 +10,8 @@ import Team from "./scenes/team";
 import UserInformation from "./scenes/contacts"; // Corrected import
 import Calendar from "./scenes/calendar/calendar";
 import Invoices from "./scenes/orders";
+import ScorePrediction from "./scenes/ScorePrediction/ScorePrediction";
+import RoomPage from "../Videochat/Room";
 import { useSelector } from "react-redux";
 
 import "./dashboard.css";
@@ -28,6 +30,9 @@ const Dashboard = () => {
             <Topbar />
             <Routes>
               <Route path="/" element={<DashboardContent />} />
+              <Route path="/score-prediction" element={<ScorePrediction />} />
+              <Route path={`/room/:roomId`} element={<RoomPage />} />
+              // {/* <Route path="/nearest-academy" element={} /> */}
               <Route path="manageUser" element={<Team />} />
               <Route path="/userInformation" element={<UserInformation />} />
               <Route path="/calendar" element={<Calendar />} />
