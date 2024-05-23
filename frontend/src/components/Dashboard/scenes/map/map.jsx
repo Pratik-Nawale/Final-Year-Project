@@ -4,7 +4,6 @@ import TextField from "@mui/material/TextField";
 import Slider from '@mui/material/Slider';
 import Button from '@mui/material/Button';
 import SearchIcon from '@mui/icons-material/Search';
-import RestartAltIcon from '@mui/icons-material/RestartAlt';
 import GoogleMapReact from 'google-map-react';
 import LocationSearchingIcon from '@mui/icons-material/LocationSearching';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
@@ -172,9 +171,8 @@ const Map = () => {
           />
         </div>
 
-        <div>
-          
-          <Button variant='contained' style={{ width: "50%" ,alignItems: "center"}} onClick={handleSearch}>
+        <div style={{ display: 'flex', justifyContent: 'center', marginTop: 10 }}>
+          <Button variant='contained' style={{ width: "50%", alignItems: "center" }} onClick={handleSearch}>
             <SearchIcon />
             Search
           </Button>
