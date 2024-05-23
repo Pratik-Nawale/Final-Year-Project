@@ -143,8 +143,8 @@ const Map = () => {
 
   return (
     <div>
-      <div style={{ backgroundColor: "#E0C350" }}>
-        <Typography variant='h4' style={{ textAlign: "center" }}>
+      <div style={{ backgroundColor: "#1f2a40" }}>
+        <Typography variant='h4' style={{ textAlign: "center", color: "white" }}>
           G Y M F I N D E R
         </Typography>
         <TextField
@@ -156,7 +156,7 @@ const Map = () => {
         />
 
         <div style={{ display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center" }}>
-          <Typography>
+          <Typography style={{ color: "white" }}>
             Distance:
           </Typography>
           <Slider
@@ -208,7 +208,7 @@ const Map = () => {
           )}
           <LocationMarker lat={latitude || 0} lng={longitude || 0} />
         </GoogleMapReact>
-      </div>
+      </div>                       
     </div>
   );
 };
