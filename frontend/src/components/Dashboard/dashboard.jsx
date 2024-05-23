@@ -13,7 +13,8 @@ import Invoices from "./scenes/orders";
 import ScorePrediction from "./scenes/ScorePrediction/ScorePrediction";
 import RoomPage from "../Videochat/Room";
 import { useSelector } from "react-redux";
-
+import Gym from "./scenes/map/gym"
+import Map from "./scenes/map/map"
 import "./dashboard.css";
 
 const Dashboard = () => {
@@ -38,6 +39,8 @@ const Dashboard = () => {
               <Route path="/calendar" element={<Calendar />} />
               <Route path="/form" element={<Form />} />
               <Route path="/invoices" element={<Invoices />} />
+              <Route path="/nearest-academy" element={<Map />} />
+              <Route path="/nearest-academy/gym/:gymId" element={<Gym />} />
               <Route path="/*" element={<Outlet />} />
             </Routes>
           </main>
