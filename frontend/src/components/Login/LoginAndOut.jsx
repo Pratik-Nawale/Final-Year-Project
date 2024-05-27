@@ -50,7 +50,7 @@ const LoginAndOut = () => {
   // const navigate = useNavigate();
   const signUpHandler = async (e) => {
     e.preventDefault();
-    console.log(signUpData);
+    // console.log(signUpData);
     try {
       const res = await axios.post(`/api/user/signup`, signUpData);
       if (res.data.success) {

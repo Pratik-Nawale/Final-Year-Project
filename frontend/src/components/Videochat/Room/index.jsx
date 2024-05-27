@@ -4,7 +4,7 @@ import { ZegoUIKitPrebuilt } from "@zegocloud/zego-uikit-prebuilt";
 import { useSelector } from "react-redux";
 
 const RoomPage = () => {
-  // const { user } = useSelector((state) => state.user);
+  const { user } = useSelector((state) => state.user);
   // const { roomId } = user?._id;
   const {roomId} = useParams();
 
@@ -16,7 +16,7 @@ const RoomPage = () => {
       serverSecret,
       roomId,
       Date.now().toString(),
-      "Pratik"
+      user?.fullName
     );
     // use userID insted of Date.now(),"Pratik"
     const zc = ZegoUIKitPrebuilt.create(kitToken);

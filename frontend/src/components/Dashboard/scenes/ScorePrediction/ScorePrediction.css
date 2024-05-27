@@ -1,0 +1,42 @@
+/* styles.css */
+
+/* Center the form */
+#prediction-box {
+    display: flex;
+    justify-content: flex-start;
+    height: 100vh;
+    padding-top: 50px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #predicted-score {
+    padding: 20px;
+  }
+  
+  /* Style form elements */
+  .form-input {
+    width: 100%;
+    padding: 10px 60px 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .myButton {
+    background-color: #0074d9;
+    width: 100%;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Responsive adjustments */
+  @media screen and (max-width: 600px) {
+    .form-input {
+      font-size: 14px;
+    }
+  }
+  
