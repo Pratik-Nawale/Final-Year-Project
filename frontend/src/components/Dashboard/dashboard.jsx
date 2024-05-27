@@ -1,7 +1,7 @@
 // Dashboard.jsx
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { ColorModeContext, useMode } from "./theme";
-import { Route, Routes, Outlet } from "react-router-dom";
+import { Route, Routes, Outlet, useNavigate } from "react-router-dom";
 import Topbar from "./scenes/global/Topbar";
 import Sidebar from "./scenes/global/Sidebar";
 import DashboardContent from "./scenes/board";
@@ -16,10 +16,53 @@ import { useSelector } from "react-redux";
 import Gym from "./scenes/map/gym"
 import Map from "./scenes/map/map"
 import "./dashboard.css";
+import { useEffect, useState } from "react";
 
 const Dashboard = () => {
   const [theme, colorMode] = useMode();
   const { user } = useSelector((state) => state.user);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://cdn.botpress.cloud/webchat/v1/inject.js";
+    script.async = true;
+
+    script.onload = () => {
+      window.botpressWebChat.init({
+        // Your chatbot configuration goes here
+        "composerPlaceholder": "Sportz Chatbot",
+        "botConversationDescription": "Welcome!",
+        "botId": "39f05996-025d-4ffe-b2ab-4966c250c911",
+        "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
+        "messagingUrl": "https://messaging.botpress.cloud",
+        "clientId": "39f05996-025d-4ffe-b2ab-4966c250c911",
+        "webhookId": "7ea2a216-1ee0-4003-89b4-43e6574bfb28",
+        "lazySocket": true,
+        "themeName": "prism",
+        "botName": "Sportz Chatbot",
+        "avatarUrl": "",
+        "stylesheet": "https://webchat-styler-css.botpress.app/prod/d2e5a646-5c11-4eb0-8b31-e9caee6206ae/v5834/style.css",
+        "frontendVersion": "v1",
+        "useSessionStorage": true,
+        "enableConversationDeletion": true,
+        "theme": "prism",
+        "themeColor": "#2563eb"
+      });
+    };
+
+    document.head.appendChild(script);
+
+    return () => {
+      // Destroy chatbot when the component unmounts
+      if (window.botpressWebChat && typeof window.botpressWebChat.destroy === "function") {
+        window.botpressWebChat.destroy();
+      }
+
+      // Cleanup script
+      document.head.removeChild(script);
+    };
+  }, [navigate]);
 
   return (
     <ColorModeContext.Provider value={colorMode}>
